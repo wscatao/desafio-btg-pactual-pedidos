@@ -5,7 +5,8 @@
 #### Plano de Trabalho
 
 **Previsto vs Realizado:**
-Este documento apresenta uma análise comparativa entre o plano inicial e o que efetivamente ocorreu durante o projeto. Descreve quais metas foram cumpridas integralmente e onde foram identificados desvios.
+Este documento apresenta uma análise comparativa entre o plano inicial e o que efetivamente ocorreu durante o projeto.
+Descreve quais metas foram cumpridas integralmente e onde foram identificados desvios.
 
 - **Metas Cumpridas:**
     - [ ] Meta 1: [Descrição]
@@ -23,9 +24,16 @@ Este documento apresenta uma análise comparativa entre o plano inicial e o que 
 
 - **Linguagens & Versões:**
     - Java 17
-
-- **IDE's:**
-    - IntelliJ IDEA
+    - Spring Boot:
+        - **Parent**: `spring-boot-starter-parent` com a versão `3.3.1`
+        - **Dependências**:
+            - `spring-boot-starter-data-mongodb`: Starter para utilizar o MongoDB com o Spring Data MongoDB.
+            - `spring-boot-starter-web`: Starter para construir aplicações web usando Spring MVC.
+            - `spring-boot-devtools`: Fornece melhorias durante o desenvolvimento, como reinícios automáticos e
+              tratamento de erros aprimorado.
+            - `spring-boot-configuration-processor`: Suporta a geração de metadados para arquivos de configuração.
+            - `spring-boot-starter-test`: Starter para testar aplicações Spring Boot com JUnit, Mockito, entre outros.
+            -
 
 - **Sistemas Operacionais (SO's):**
     - Windows 11 e WSL Ubuntu 20.04 LTS
@@ -34,6 +42,28 @@ Este documento apresenta uma análise comparativa entre o plano inicial e o que 
 
 - **Arquitetura**
 - **Modelagem da Base de Dados**
+
+  ![Diagrama ER da Base de Dados](https://i.imgur.com/0X2bOlx.png)
+
+    ```json
+    {
+      "clientId": "65387b14-c662-4bc6-9dac-209e48845828",
+      "orderId": "b84b467d-74f7-40b0-82dd-7900a2d02657",
+      "itens": [
+        {
+          "product": "processador amd ryzen 7 5700U",
+          "quantity": 1,
+          "price": "1085.99"
+        },
+        {
+          "product": "ssd seagate barracuda",
+          "quantity": 1,
+          "price": "369.00"
+        }
+      ]
+    }
+    ``` 
+
 - **Implantação da Solução**
 - **Infraestrutura Cloud**
 
