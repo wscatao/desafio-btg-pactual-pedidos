@@ -1,10 +1,10 @@
-package br.com.btgpactual.pedidos;
+package br.com.btgpactual.orders;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PedidosApplicationTests {
+class OrdersApplicationTests {
 
 	@Test
 	void contextLoads() {
