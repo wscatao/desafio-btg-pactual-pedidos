@@ -15,6 +15,18 @@ services:
       - orders_datadb:/data/db
       - ./init/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
 
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:4.0-rc
+    restart: always
+    environment:
+      RABBITMQ_DEFAULT_USER: username
+      RABBITMQ_DEFAULT_PASS: password
+    ports:
+      - 5672:5672
+    networks:
+      - backend
+
 volumes:
   orders_datadb:
 
