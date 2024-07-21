@@ -77,10 +77,16 @@ Descreve quais metas foram cumpridas integralmente e onde foram identificados de
 - **URLs dos códigos gerados:**
     - [URL do Repositório 1]
     - [URL do Repositório 2]
+- **Instruções para inicializar o projeto na sua máquina:**
+    - VM options: 
+      - -Dspring.profiles.active=local
+      - Comando do docker-compose para criar uma base e inserir alguns dados
+      - 
 
 #### Referências
 
 - Citação de todas as fontes de pesquisa, documentações e referências técnicas consultadas.
+- https://hub.docker.com/_/mongo
 
 #### Outros Itens Relevantes
 
