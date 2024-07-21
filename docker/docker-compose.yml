@@ -1,7 +1,4 @@
-version: '2.29.0'
-
 name: orders
-
 services:
   mongo:
     container_name: mongodb
