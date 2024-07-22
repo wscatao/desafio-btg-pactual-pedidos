@@ -12,13 +12,4 @@ public class ItensEntity {
     private String product;
     private int quantity;
     private BigDecimal price;
-
-    public ItensEntity(String product, int quantity, BigDecimal price) {
-        this.product = product;
-        this.quantity = quantity;
-        this.price = price;
-    }
-
-    public ItensEntity() {
-    }
 }

@@ -87,6 +87,7 @@ Descreve quais metas foram cumpridas integralmente e onde foram identificados de
 
 - Citação de todas as fontes de pesquisa, documentações e referências técnicas consultadas.
 - https://hub.docker.com/_/mongo
+- https://x-team.com/blog/set-up-rabbitmq-with-docker-compose
 
 #### Outros Itens Relevantes
 

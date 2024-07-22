@@ -17,18 +17,22 @@ services:
 
   rabbitmq:
     container_name: rabbitmq
-    image: rabbitmq:4.0-rc
+    image: rabbitmq:3-management-alpine
     restart: always
     environment:
       RABBITMQ_DEFAULT_USER: username
       RABBITMQ_DEFAULT_PASS: password
     ports:
       - 5672:5672
+      - 15672:15672
     networks:
       - backend
+    volumes:
+      - rabbitmq_data:/var/lib/rrabbitmq
 
 volumes:
   orders_datadb:
+  rabbitmq_data:
 
 networks:
   backend:

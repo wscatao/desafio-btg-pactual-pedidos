@@ -17,13 +17,4 @@ public class OrderEntity {
     private UUID orderId;
     private UUID clientId;
     private List<ItensEntity> itens;
-
-    public OrderEntity(UUID orderId, UUID clientId, List<ItensEntity> itens) {
-        this.orderId = orderId;
-        this.clientId = clientId;
-        this.itens = itens;
-    }
-
-    public OrderEntity() {
-    }
 }
