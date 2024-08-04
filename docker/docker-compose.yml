@@ -18,10 +18,9 @@ services:
   rabbitmq:
     container_name: rabbitmq
     image: rabbitmq:3-management-alpine
-    restart: always
     environment:
-      RABBITMQ_DEFAULT_USER: username
-      RABBITMQ_DEFAULT_PASS: password
+      RABBITMQ_DEFAULT_USER: defaultUser
+      RABBITMQ_DEFAULT_PASS: defaultPass
     ports:
       - 5672:5672
       - 15672:15672
@@ -29,6 +28,20 @@ services:
       - backend
     volumes:
       - rabbitmq_data:/var/lib/rrabbitmq
+
+  order-generator:
+    container_name: order-generator
+    image: wscatao/order-generator
+    environment:
+      RABBITMQ_DEFAULT_USER: defaultUser
+      RABBITMQ_DEFAULT_PASS: defaultPass
+    ports:
+      - 8081:8081
+    networks:
+      - backend
+    depends_on:
+      - rabbitmq
+
 
 volumes:
   orders_datadb:
